@@ -85,7 +85,7 @@ class ResponsiveImage extends React.Component {
    * @returns {undefined} undefined
    */
   getCurrentSizeClone() {
-    return React.cloneElement(this.state.currentImageSize, Object.assign({},
+    return React.cloneElement(this.state.currentImageSize,
       {
         alt: this.props.alt,
         background: this.props.background,
@@ -96,7 +96,7 @@ class ResponsiveImage extends React.Component {
         ref: 'currentImageSize',
         imageStyle: this.props.imageStyle,
         windowSize: this.state.windowSize,
-      }));
+      });
   }
 
 
@@ -133,6 +133,16 @@ class ResponsiveImage extends React.Component {
    */
   loadImage() {
     this.refs.currentImageSize.preloadImage();
+  }
+
+
+  /**
+   * Sets a new style for the image, intended as a public method
+   * @param {Object} style - A style object
+   * @returns {undefined} undefined
+   */
+  setStyle(style) {
+    this.refs.currentImageSize.setStyle(style);
   }
 }
 

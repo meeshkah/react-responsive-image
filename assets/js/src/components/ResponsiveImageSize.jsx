@@ -131,6 +131,16 @@ class ResponsiveImageSize extends React.Component {
 
     imageElement.src = this.props.path;
   }
+
+
+  /**
+   * Sets a new style for the image, intended as a public method
+   * @param {Object} style - A style object
+   * @returns {undefined} undefined
+   */
+  setStyle(style) {
+    this.refs.currentImageSize.setStyle(style);
+  }
 }
 
 
