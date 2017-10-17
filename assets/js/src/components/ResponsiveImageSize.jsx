@@ -75,7 +75,7 @@ class ResponsiveImageSize extends React.Component {
           alt={this.props.alt}
           onLoad={this.onLoad}
           onError={this.onError}
-          ref='image'
+          ref={(image) => this.image = image}
           src={this.state.imagePath}
           style={this.props.imageStyle}
         />
